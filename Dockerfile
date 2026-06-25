@@ -12,7 +12,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/server ./cmd/server
 
 # ---- Runtime stage ----
-FROM gcr.io/distroless/static-nonroot
+FROM gcr.io/distroless/static:nonroot
 
 # Distroless static image: tiny, no shell, runs as non-root by default.
 COPY --from=build /out/server /server
