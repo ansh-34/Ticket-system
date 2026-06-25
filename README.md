@@ -10,8 +10,8 @@ ownership-checked.
 - **Storage:** in-memory, concurrency-safe (no external database to provision)
 - **Auth:** JWT (`Authorization: Bearer <token>`), passwords stored as bcrypt hashes
 
-> **Deployed URL:** `https://<your-app>.onrender.com`
-> **Public health check:** `https://<your-app>.onrender.com/health`
+> **Deployed URL:** `https://ticket-system-83de.onrender.com`
+> **Public health check:** `https://ticket-system-83de.onrender.com/health`
 >
 > _(Fill these in after deploying — see [Deployment](#deployment). The repo ships
 > with a `render.yaml` blueprint so deployment is a few clicks.)_
@@ -176,8 +176,8 @@ The repo includes a **`render.yaml`** blueprint for [Render](https://render.com)
 2. In Render: **New +** → **Blueprint** → select the repo → **Apply**.
    Render reads `render.yaml`, builds the Docker image, generates a random
    `JWT_SECRET`, and uses `/health` as the health check.
-3. After the build, your service is live at `https://<your-app>.onrender.com`
-   and `https://<your-app>.onrender.com/health` is public.
+3. After the build, your service is live at `https://ticket-system-83de.onrender.com`
+   and `https://ticket-system-83de.onrender.com/health` is public.
 
 > Any free Docker host works equally well (Fly.io, Railway, Koyeb, Google Cloud
 > Run). The image is a tiny distroless static binary, so it runs anywhere that
