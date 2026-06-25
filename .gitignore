@@ -1,7 +1,7 @@
 # Binaries
 /bin/
 *.exe
-server
+/server
 
 # Local env (never commit real secrets)
 .env
