@@ -1,0 +1,18 @@
+# Render.com blueprint — deploys the service from the Dockerfile on the free tier.
+# Push this repo to GitHub, then in the Render dashboard choose
+# "New +" -> "Blueprint" and point it at the repo. JWT_SECRET is generated
+# automatically; the public /health endpoint is used as the health check.
+services:
+  - type: web
+    name: ticket-system
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_TTL_HOURS
+        value: "24"

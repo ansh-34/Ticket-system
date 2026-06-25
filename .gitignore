@@ -1,0 +1,17 @@
+# Binaries
+/bin/
+*.exe
+server
+
+# Local env (never commit real secrets)
+.env
+.env.local
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Go
+*.test
+*.out
